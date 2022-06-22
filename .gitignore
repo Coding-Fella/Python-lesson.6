@@ -1,129 +1,53 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+  #Lektion 8
 
-# C extensions
-*.so
+# if statements = En specifik kod kommer verkställs/"printas" ifall dens villkor stämmer.
+# Alltså ifall ett speciellt svar på en fråga stämmer med ett visst "if statement" kommer detta "if statement" verkställ/"printa" en kod.
+# Detta kan vara bra för att koden ska kunna skilja på olika svar på den fråga som ges.
 
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-pip-wheel-metadata/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
 
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
+#               Exempel 1
 
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
+# I detta fall kommer tillståndet stämma beroende på åldern av en person.
+ålder = int(input("Hur gammal är du?: "))
 
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
+# Det första "if statement" kommer verkställas ifall på personen har är över 18 år.
+# Ifall ett svar på frågan uppnår villkoren som detta "if statement" har kommer en del kod i detta fall "printas".
+# Ifall åldern är över 18 år --> print(text).
 
-# Translations
-*.mo
-*.pot
+if 94.1>= ålder >= 18:
+    print()
+    print("Du kan lagligt köpa cannabis i Nederländerna!")
+    print()
+    print("Du är myndig!")
+    print()
 
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
 
-# Flask stuff:
-instance/
-.webassets-cache
+#               Exempel 2
 
-# Scrapy stuff:
-.scrapy
+# "elif statements" kommer "printas" ifall villkoren hos alla ovanstående "if statement" inte uppnås.
+# Genom att skriva "ålder == 100:" tas det som att "if statement" uppnås då åldern är lika med 100 år.
+# Om man istället skrev "ålder = 100:" kommer koden tro att du vill sätta "ålder" lika med 100.
+elif ålder == 100:
+    print()
+    print("du är hundra år gammal!")
 
-# Sphinx documentation
-docs/_build/
+elif 129.2 >= ålder >= 95:
+    print()
+    print("Du är äldre än Volvo!")
 
-# PyBuilder
-target/
+elif ålder >= 130:
+     print()
+     print("Du är en vampyr!")
 
-# Jupyter Notebook
-.ipynb_checkpoints
+elif ålder < 0:
+    print()
+    print("Försök igen!")
+ 
 
-# IPython
-profile_default/
-ipython_config.py
+#               Exempel 3
 
-# pyenv
-.python-version
-
-# pipenv
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
-#   install all needed dependencies.
-#Pipfile.lock
-
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow
-__pypackages__/
-
-# Celery stuff
-celerybeat-schedule
-celerybeat.pid
-
-# SageMath parsed files
-*.sage.py
-
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
+# Genom att använda "else" kommer koden "printa" en text ifall villkoren hos alla ovanstående "if statements" och "elif statements" inte uppnås.
+# Alltså kommer detta "else statement" aktiveras ifall "ålder" är mellan 0 och 17 år.
+else:
+    print()
+    print("Du är ett barn!")
